@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Photo and Video Gallery</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e5e0e0;
+            text-align: center;
+        }
+
+        .container {
+            background-color: #db9d9d;
+            padding: 20px;
+            margin: 20px;
+            border: 1px solid #ddd;
+            border-radius: 50px;
+            display: inline-block;
+            width: 300px;
+        }
+
+        .media {
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Happy Birthday Kenzie!</h1>
+    <h2>I Love You So Much</h2>
+
+    <script>
+        // Function to shuffle an array randomly
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+
+        // Define an array with container IDs
+        const containerIds = [
+            'container1', 'container2', 'container3', 'container4', 'container5',
+            'container6', 'container7', 'container8', 'container9', 'container10'
+        ];
+
+        // Shuffle the order of container IDs
+        shuffleArray(containerIds);
+
+        // Append shuffled containers back to the body
+        const body = document.body;
+        containerIds.forEach(id => {
+            const container = document.getElementById(id);
+            body.appendChild(container);
+        });
+
+        
+    </script>
+
+    <div class="container" id="container1">
+        <h2></h2>
+        <img class="media" src="p1.JPG" >
+    </div>
+
+
+    <div class="container" id="container3">
+        <h2></h2>
+        <img class= "media" src="p2.JPG">
+    </div>
+    <div class="container" id="container4">
+        <h2></h2>
+        <img class= "media" src="p3.JPG" >
+    </div>
+    <div class="container" id="container5">
+        <h2></h2>
+        <img class ="media" src="p4.JPG" >
+    </div>
+    <div class="container" id="container6">
+        <h2></h2>
+        <img class ="media" src="p5.JPG" >
+    </div>
+    <div class="container" id="container7">
+        <h2></h2>
+        <img class= "media" src="p7.JPG" >
+    </div>
+    <div class="container" id="container8">
+        <h2></h2>
+        <img class= "media" src="p8.JPG">
+    </div>
+    <div class="container" id="container9">
+        <h2></h2>
+        <img class ="media" src="p9.JPG" >
+    </div>
+   
+    <p></p>
+        <a href="page2.html" class="all_button">Back</a>
+    <!-- Add more containers for photos and videos as needed with unique IDs -->
+</body>
+</html>
+

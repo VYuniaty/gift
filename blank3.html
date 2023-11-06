@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blank Page 3</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Surprise!</h1>
+        <p>I'm outside your house babe!</p>
+        <p>HAHAHAHAHHAHHAHA</p>
+       
+        <p>Tick Tock, Tick Tock, Tick Tock...
+        <p>You have 15 minutes to get ready!</p>
+        <p>Don't forget to read the letter first, the password is 'ILoveYou'</p>
+        <p id="countdown">Countdown: 15:00</p>
+        
+        <a href="page2.html" class="button">Back</a>
+    </div>
+
+    <script>
+        function startCountdown(minutes) {
+            var seconds = minutes * 60;
+            var countdownElement = document.getElementById("countdown");
+
+            var countdownInterval = setInterval(function() {
+                var minutesLeft = Math.floor(seconds / 60);
+                var secondsLeft = seconds % 60;
+
+                countdownElement.textContent = "Time left: " + 
+                    (minutesLeft < 10 ? "0" : "") + minutesLeft + ":" + 
+                    (secondsLeft < 10 ? "0" : "") + secondsLeft;
+
+                if (seconds <= 0) {
+                    clearInterval(countdownInterval);
+                    countdownElement.textContent = "Time's up!";
+                    // You can add code to perform an action when the countdown is finished.
+                }
+
+                seconds--;
+            }, 1000);
+        }
+
+        // Start the countdown when the page loads
+        window.onload = function() {
+            startCountdown(15);
+        };
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>On This Special Day</title>
+    <link rel="stylesheet" type="text/css" href="styles.css?version=2">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("ken1.jpg"), url("ken2.jpg"); /* Use multiple background images */
+            background-repeat: no-repeat, no-repeat; /* Set no repeat for both images */
+            background-position: left top, right top; /* Position the images side by side */
+            background-size: 50%, 50%; /* Use 'auto' for original image size */
+            background-color: rgba(255, 255, 255, 0.5); /* Add a transparent white background */
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.5); /* Add a transparent white background */
+            border-radius: 100px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            text-align: center;
+            max-width: 200%; /* Adjust the maximum width */
+        }
+
+        #clockDate {
+            font-size: 48px;
+            color: #ff6b6b;
+        }
+
+        #datePart {
+            font-size: 500px;
+            margin: 0 20px; /* Reduce the margin for tighter spacing */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="font-size: 100px;">On this special day</h1>
+        <div id="clockDate">
+            <span id="day" class="datePart">21</span>
+            <span id="space1" class="datePart">/</span>
+            <span id="month" class="datePart">11</span>
+            <span id="space2" class="datePart">/</span>
+            <span id="year" class="datePart">23</span>
+        </div>
+        <a href="index3.html" class="all_button">Open it</a>
+    </div>
+</body>
+</html>
